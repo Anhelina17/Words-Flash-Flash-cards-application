@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="LoginInput.Username"></label>
+        <input asp-for="LoginInput.Username" />
+    </div>
+    <div>
+        <label asp-for="LoginInput.Password"></label>
+        <input asp-for="LoginInput.Password" type="password" />
+    </div>
+    <div>
+        <button type="submit">Login</button>
+        <button type="button" onclick="alert('Reset feature not implemented')">Reset Password</button>
+    </div>
+    <div style="color:red;">
+        @Model.ErrorMessage
+    </div>
+</form>
